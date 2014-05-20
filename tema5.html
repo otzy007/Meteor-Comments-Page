@@ -1,0 +1,30 @@
+<head>
+  <title>tema5</title>
+</head>
+
+<body>
+  {{> tema5 }}
+</body>
+
+<template name="tema5">
+  <div id="input">
+    <form name="newMessage" id="new-message" action="#">
+      Name: <input type="text" id="name" name="name" />
+      <span id='name-error'></span><br />
+      Email: <input type="text" id="email" name="email" />
+      <span id='email-error'></span><br />
+      Message: <input type="text" id="message" name="message" size="100"/>
+      <span id='message-error'></span><br />
+      <input type="submit" value="Send" id="send" />
+    </form>
+  </div>
+  <div class="messages">
+    {{#each messages}}
+      <div class="message">
+        Name: {{name}}
+        <br />
+        {{comment}}
+      </div>
+    {{/each}}
+  </div>
+</template>
